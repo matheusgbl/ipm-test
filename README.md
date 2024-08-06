@@ -13,7 +13,7 @@ Projeto desenvolvido para entrega do desafio técnico de front end da IPM.
 ## Referências:
 - Menu mobile/hamburguer: [css-hamburguer](https://codepen.io/t_afif/pen/NWXmRWO);
 
-## Como executar
+## Como executar localmente
 - Primeiro é necessário fazer o download do python caso não possua [python-download](https://www.python.org/downloads/)
 - Em seguida executar o download do flask com o comando:
     ```bash
@@ -25,3 +25,6 @@ Projeto desenvolvido para entrega do desafio técnico de front end da IPM.
     python main.py
     ```
 - Acesse a URL disponibilizada através do terminal, geralmente é `http://127.0.0.1:5000`
+
+## Acesso ao projeto na vercel
+- Link de acesso para o deploy realizado na vercel [ipm-test](https://ipm-test.vercel.app/)
