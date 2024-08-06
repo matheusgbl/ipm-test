@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/scripts/header.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="icon" type="image/png" href="../static/images/favicon.png">
+    <title>IPM Test</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <a href="/">
+                <img src="../static/images/logo-ipm-white.svg" alt="Company Logo" class="logo">
+            </a>
+            <nav id="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li>
+                        <a href="#services">Serviços</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#digital">Digital</a></li>
+                                <li><a href="#marketing">Marketing</a></li>
+                                <li><a href="#data">Data</a></li>
+                                <li><a href="#all_services">Todos os serviços</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#cases">Cases</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#case1">Case 1</a></li>
+                                <li><a href="#case2">Case 2</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#list">Lista de usuários</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <input type="checkbox" role="button" aria-label="Display the menu" class="menu" id="menuToggle">
+            <nav id="nav" class="nav" aria-label="Mobile Navigation">
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li class="has-submenu">
+                        <a href="#services">Serviços</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#digital">Digital</a></li>
+                                <li><a href="#marketing">Marketing</a></li>
+                                <li><a href="#data">Data</a></li>
+                                <li><a href="#all_services">Todos os serviços</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#cases">Cases</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#case1">Case 1</a></li>
+                                <li><a href="#case2">Case 2</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#list">Lista de usuários</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container users">
+        <h1>Usuários que confiam no nosso trabalho</h1>
+        <div class="users-list">
+            {% for user in users %}
+            <div class="user">
+                <img src="{{ user.profile_photo }}" alt="Profile Photo">
+                <h2>{{ user.name }}</h2>
+                <p>Email: {{ user.email }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="title">
+                <h4>Siga nossas redes sociais: </h4>
+            </div>
+            <ul>
+                <li>
+                    <a 
+                        href="https://www.facebook.com/ipmsistemas/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        title="Facebook Ipm Sistemas">
+                        <picture>
+                            <img src="../static/icons/icon-facebook.svg" alt="Facebook Ipm Sistemas">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        href="https://x.com/ipmsistemas"
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        title="X Ipm Sistemas">
+                        <picture>
+                            <img src="../static/icons/icon-x.svg" alt="X Ipm Sistemas">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        href="https://www.linkedin.com/company/ipmsistemas/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Linkedin Ipm Sistemas">
+                        <picture>
+                            <img src="../static/icons/icon-linkedin.svg" alt="Linkedin Ipm Sistemas">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        href="https://www.instagram.com/ipmsistemas/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Instagram Ipm Sistemas">
+                        <picture>
+                            <img src="../static/icons/icon-instagram.svg" alt="Instagram Ipm Sistemas">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        href="https://www.youtube.com/channel/UC6qR6SivTwGZGKbBz6tmJsQ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Instagram Ipm Sistemas">
+                        <picture>
+                            <img src="../static/icons/icon-youtube.svg" alt="Youtube Ipm Sistemas">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

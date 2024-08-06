@@ -1,0 +1,29 @@
+.container.users h1 {
+    margin: 3rem 0;
+}
+
+.users-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding-bottom: 2rem;
+}
+
+.users-list .user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.users-list .user img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.users-list .user h2 {
+    text-wrap: wrap;
+    text-align: center;
+}

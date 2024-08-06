@@ -1,21 +1,23 @@
-# Project Title
+# IPM Teste
 
-## Description
-A brief description of your project.
+## Descrição
+Projeto desenvolvido para entrega do desafio técnico de front end da IPM.
 
-## Folder Structure
-- `assets/`: Contains all static assets like images, CSS, and JavaScript files.
-  - `images/`: Contains image files.
-  - `css/`: Contains CSS files.
-  - `js/`: Contains JavaScript files.
-- `src/`: Contains source files for the project.
-  - `index.html`: The main HTML file.
-  - `main.py`: The Python file.
-  - `app.js`: The JavaScript file related to the main application logic.
-- `.vscode/`: Contains VSCode-specific settings and configurations.
-- `README.md`: The README file for your project documentation.
-- `.gitignore`: Specifies files and directories to be ignored by Git.
-- `package.json`: Manages project dependencies and scripts if you are using Node.js and npm.
+## Estrutura de pastas
+- `src/`: Contém os arquivos-fonte do projeto.
+  - `static`: Contém os arquivos de estilos, scripts, fontes e recursos, como imagens e ícones.
+  - `templates`: A pasta de templates que possui a página principal e a página para recuperar a lista de usuários de uma API.
+  - `main.py`: O arquivo Python principal para fazer a chamada a API.
+- `README.md`: O arquivo README para a documentação do projeto.
 
-## How to Run
-Instructions on how to set up and run your project.
+## Como executar
+- Primeiro é necessário fazer o download do python caso não possua [python-download](https://www.python.org/downloads/)
+- Em seguida executar o download do flask com o comando:
+    ```bash
+    pip install Flask
+    ```
+- Navegue até a pasta /src e execute o comando:
+  ```bash
+    python main.py
+    ```
+- Acesse a URL disponibilizada através do terminal, geralmente é `http://127.0.0.1:5000`

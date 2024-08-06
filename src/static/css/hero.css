@@ -1,0 +1,23 @@
+#hero .container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#hero .container .info {
+    width: 50%;
+}
+
+#hero .container h1 {
+    margin-bottom: 2rem;
+}
+
+#hero .container p {
+    max-width: 800px;
+    line-height: 1.5rem;
+}
+
+#hero .container img {
+    height: 480px;
+}

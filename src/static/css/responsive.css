@@ -1,0 +1,229 @@
+@media only screen and (max-width: 1440px) {
+    .container {
+        padding: 0 120px;
+    }
+
+    #hero .container {
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+        align-items: center;
+    }
+
+    #hero .container h1 {
+        margin-bottom: 1rem;
+    }
+
+    #hero .container img {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .users-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .container {
+        padding: 0 100px;
+    }
+
+    #hero .container {
+        padding-bottom: 3.5rem;
+    }
+
+    #hero .container img {
+        height: 100%;
+        width: 45%;
+    }
+
+    #hero .container .info {
+        width: 55%;
+    }
+
+    #contact-form .container .contact-info {
+        max-width: 500px;
+    }
+
+    #contact-form h2, #contact-form p {
+        line-height: normal;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: var(--size-h2);
+    }
+    
+    .container {
+        padding: 0 40px;
+    }
+
+    #hero .container {
+        margin-top: 3.5rem;
+    }
+
+    #hero .container img {
+        height: 100%;
+        width: 45%;
+    }
+
+    #hero .container .info {
+        width: 55%;
+    }
+
+    #hero .container p {
+        line-height: normal;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header.fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    header nav {
+        display: none;
+        padding-left: 0;
+        padding: 2rem;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header .container {
+        justify-content: space-between;
+    }
+
+    header .container .menu {
+        display: block;
+    }
+
+    header nav ul li .submenu {
+        position: relative;
+    }
+
+    header nav ul li .submenu ul li a {
+        color: #FFF;
+        padding: 0;
+    }
+
+    #nav {
+        display: block;
+    }
+
+    .nav {
+        width: 40%;
+        right: -100%;
+        padding-top: 2rem;
+    }
+
+    .submenu ul {
+        text-align: left;
+    }
+
+    #hero .container {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    #hero .container .info {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    #hero .container img {
+        height: 450px;
+        width: auto;
+    }
+
+    #contact-form .container {
+        flex-direction: column;
+    }
+
+    #contact-form .container .contact-info {
+        max-width: 100%;
+    }
+
+    #contact-form form {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #contact-form form button {
+        width: 100%;
+    }
+
+    .users-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    header {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    header .container {
+        padding: 0 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    
+    #hero .container {
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: var(--size-h3);
+    }
+
+    h2 {
+        font-size: var(--size-h4);
+    }
+
+    #hero .container img {
+        height: 300px;
+    }
+
+    #contact-form .container {
+        padding-top: 2rem;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    .nav {
+        width: 60%;
+        top: 77px;
+    }
+
+    .users-list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #hero .container img {
+        height: 280px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #hero .container img {
+        height: 250px;
+    }
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/scripts/app.js"></script>
+    <script src="../static/scripts/header.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="icon" type="image/png" href="../static/images/favicon.png">
+    <title>IPM Teste</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <a href="/">
+                <img src="../static/images/logo-ipm-white.svg" alt="Company Logo" class="logo">
+            </a>
+            <nav id="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li>
+                        <a href="#services">Serviços</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#digital">Digital</a></li>
+                                <li><a href="#marketing">Marketing</a></li>
+                                <li><a href="#data">Data</a></li>
+                                <li><a href="#all_services">Todos os serviços</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#cases">Cases</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#case1">Case 1</a></li>
+                                <li><a href="#case2">Case 2</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="{{ url_for('users_list') }}">Lista de usuários</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <input type="checkbox" role="button" aria-label="Display the menu" class="menu" id="menuToggle">
+            <nav id="nav" class="nav" aria-label="Mobile Navigation">
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li class="has-submenu">
+                        <a href="#services">Serviços</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#digital">Digital</a></li>
+                                <li><a href="#marketing">Marketing</a></li>
+                                <li><a href="#data">Data</a></li>
+                                <li><a href="#all_services">Todos os serviços</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#cases">Cases</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#case1">Case 1</a></li>
+                                <li><a href="#case2">Case 2</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#list">Lista de usuários</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Default Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="info">
+                    <h1>Gestão Pública Inteligente</h1>
+                    <p>
+                        Uma solução inovadora para a administração pública que emprega <strong>inteligência artificial</strong> e tecnologia de ponta para a distribuição de software a governos. <br> <br>
+                        Nossa plataforma otimiza processos, melhora a eficiência operacional e proporciona serviços de alta qualidade à <strong>sociedade</strong>. <br> <br>
+                        Com foco na <strong>transparência e na eficácia</strong>, permitimos que os governos adotem ferramentas tecnológicas avançadas, promovendo um ambiente mais conectado e responsivo às necessidades dos cidadãos. <br> <br>
+                        Ao integrar soluções <strong>tecnológicas avançadas</strong>, promove uma administração mais ágil e responsiva às necessidades da sociedade, <strong>otimizando</strong> recursos e proporcionando melhorias significativas na vida dos cidadãos.
+                    </p>
+                </div>
+                <img src="../static/images/business_people.png" alt="Business people">
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section id="contact-form">
+            <div class="container">
+                <div class="contact-info">
+                    <h2>Ajude-nos a Melhorar a Gestão Pública</h2>
+                    <p>
+                        Estamos comprometidos em transformar a administração pública através da inteligência artificial e tecnologia de ponta. <br>
+                        Para oferecer soluções cada vez mais eficazes e alinhadas às necessidades dos governos e cidadãos, precisamos da sua colaboração. <br>
+                    </p>
+                    <p>
+                        Preencha o formulário abaixo com suas informações e contribua para o desenvolvimento de uma gestão pública mais eficiente e inovadora. <br>
+                        Sua participação é fundamental para construirmos um futuro melhor! <br>
+                    </p>
+                </div>
+                <form id="contactForm" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <br>
+                        <input type="text" id="name" name="name" placeholder="Nome completo" required>
+                        <span class="error-message" id="name-error">Este campo é obrigatório, por favor preencha!</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="exemplo@mail.com" required>
+                        <span class="error-message" id="email-error">Este campo é obrigatório, por favor preencha!</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <br>
+                        <textarea id="message" name="message" placeholder="Escreva sua mensagem" required></textarea>
+                        <span class="error-message" id="message-error">Este campo é obrigatório, por favor preencha!</span>
+                    </div>
+                    <div class="buttons">
+                        <button id="submitButton" type="submit">Enviar</button>
+                        <span id="loader" class="loader"></span>
+                    </div>
+                    <div id="success-message">
+                        <p>Mensagem enviada! Entraremos em contato em breve.</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="title">
+                <h4>Siga nossas redes sociais: </h4>
+            </div>
+            <ul>
+                <li>
+                    <a 
+                        href="https://www.facebook.com/ipmsistemas/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        title="Facebook Ipm Sistemas">
+                        <picture>
+                            <img src="../static/icons/icon-facebook.svg" alt="Facebook Ipm Sistemas">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        href="https://x.com/ipmsistemas"
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        title="X Ipm Sistemas">
+                        <picture>
+                            <img src="../static/icons/icon-x.svg" alt="X Ipm Sistemas">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        href="https://www.linkedin.com/company/ipmsistemas/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Linkedin Ipm Sistemas">
+                        <picture>
+                            <img src="../static/icons/icon-linkedin.svg" alt="Linkedin Ipm Sistemas">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        href="https://www.instagram.com/ipmsistemas/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Instagram Ipm Sistemas">
+                        <picture>
+                            <img src="../static/icons/icon-instagram.svg" alt="Instagram Ipm Sistemas">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        href="https://www.youtube.com/channel/UC6qR6SivTwGZGKbBz6tmJsQ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Instagram Ipm Sistemas">
+                        <picture>
+                            <img src="../static/icons/icon-youtube.svg" alt="Youtube Ipm Sistemas">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</html>

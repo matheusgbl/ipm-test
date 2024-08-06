@@ -1,0 +1,157 @@
+header {
+    background-color: var(--base-red);
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    padding-left: 200px;
+}
+
+header ul {
+    display: flex;
+    gap: 40px;
+}
+
+header ul li {
+    list-style: none;
+    position: relative;
+    height: 204%;
+}
+
+header ul li a {
+    position: relative;
+}
+
+header nav ul li .submenu {
+    display: none;
+}
+
+header nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 200px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+header nav ul li .submenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    border-spacing: 0.5rem;
+}
+
+header nav ul li .submenu ul li {
+    position: relative;
+}
+
+header nav ul li .submenu ul li:after {
+    content: "";
+    width: 80%;
+    border-bottom: 1px solid var(--base-red);
+    display: block;
+    margin-left: 1rem;
+}
+
+header nav ul li .submenu ul li:last-child::after {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+header nav ul li .submenu ul li a {
+    padding: 0.5rem 1rem;
+    padding-bottom: 0;
+    color: #000;
+    font-family: "Inter", sans-serif;
+    position: relative;
+}
+
+header nav ul li .submenu ul li a:hover {
+    color: var(--base-red);
+}
+
+header nav ul li:hover .submenu {
+    left: 0;
+    top: 100%;
+}
+
+header nav ul li ul li:hover > .submenu {
+    display: block;
+}
+
+header nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+header nav ul li:hover {
+    cursor: pointer;
+}
+
+header nav ul li:hover a::after {
+    transform: rotate(180deg);
+}
+
+header nav ul li.no-children a {
+    position: relative;
+}
+
+header #main-nav ul li a::after {
+    content: "";
+    display: block;
+    margin-left: 0.5rem;
+    width: 0.7rem;
+    height: 0.5rem;
+    background: url(../icons/icon-chevron.svg) no-repeat center / cover;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+header #main-nav ul li.no-children a::after {
+    display: none;
+}
+
+header #main-nav ul li.no-children a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFF;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: -8px;
+    bottom: 0;
+}
+
+header #main-nav ul li.no-children:hover a::after {
+    width: 100%;
+}
+
+header nav ul li:hover > .submenu {
+    display: block;
+}
+
+.submenu ul li a {
+    padding: 0.5rem 1rem;
+    display: block;
+    white-space: nowrap;
+}
