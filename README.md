@@ -10,12 +10,16 @@ Projeto desenvolvido para entrega do desafio técnico de front end da IPM.
   - `main.py`: O arquivo Python principal para fazer a chamada a API.
 - `README.md`: O arquivo README para a documentação do projeto.
 
+## Referências:
+- Menu mobile/hamburguer: [css-hamburguer](https://codepen.io/t_afif/pen/NWXmRWO);
+
 ## Como executar
 - Primeiro é necessário fazer o download do python caso não possua [python-download](https://www.python.org/downloads/)
 - Em seguida executar o download do flask com o comando:
     ```bash
     pip install Flask
     ```
+- Caso necessário, segue o link da documentação do Flask [flask-docs](https://flask.palletsprojects.com/en/3.0.x/installation/)
 - Navegue até a pasta /src e execute o comando:
   ```bash
     python main.py
